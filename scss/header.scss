@@ -1,0 +1,9 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    height: $header-height;
+    background: $primary-bkg;
+    .logo img {
+        max-height: $header-height;
+    }
+}

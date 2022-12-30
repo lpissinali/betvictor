@@ -1,0 +1,16 @@
+@import "variables.scss";
+
+.matches {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+}
+
+.matches__match {
+    background: $primary-bkg;
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 80px;
+}

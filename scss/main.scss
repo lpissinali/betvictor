@@ -1,0 +1,48 @@
+@import 'variables.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body
+{
+  margin: 0 auto;
+  background: $tertiary-bkg;
+  font-family: $font-default;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  color: $secondary-text;
+}
+
+main {
+    position: relative;
+    height: calc(100% - $header-height);
+}
+
+.main__section {
+    padding: 20px;
+}
+
+
+@media only screen and (min-width: $screen-xl-min) {
+    main {
+        display: flex;
+    }
+
+    .main__section {
+        flex-direction: column;
+        flex: 2;
+    }
+}
+
+@media only screen and (min-width: $screen-xl-max) {
+    body {
+        width: $screen-xl-max;
+    }
+}
