@@ -12,6 +12,20 @@
         $(window).load(function() {
             document.getElementById('loader').style.display = 'none';
         })
+
+        $(document).ready(function() {
+            $('.tabs__handlers a').click(function() {
+                $('.tabs__content section').hide();
+                $('.tabs__handlers a.active').removeClass('active');
+                $(this).addClass('active');
+
+                var panel = $(this).attr('href');
+                $(panel).show();
+
+                return false;
+            }); 
+            $('.tabs__handlers a:first').click();
+        }); 
     </script>
 </head>
 
@@ -45,14 +59,11 @@
             <p>This is the first paragraph</p>
             <p>This is the second paragraph</p>
             <div class="tabs">
-                <input type="radio" id="tab-1" name="tab" checked="checked">
-                <span>Page 1</span>
-    
-                <input type="radio" id="tab-2" name="tab">
-                <span>Page 2</span>
-    
-                <input type="radio" id="tab-3" name="tab">
-                <span>Page 3</span>
+                <div class="tabs__handlers">
+                    <a href="#tab-item-1" class="active">Page 1</a>
+                    <a href="#tab-item-2">Page 2</a>
+                    <a href="#tab-item-3">Page 3</a>
+                </div>
     
                 <div class="tabs__content">
                     <section id="tab-item-1">

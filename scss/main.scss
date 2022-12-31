@@ -23,6 +23,7 @@ body
 main {
     position: relative;
     height: calc(100% - $header-height);
+    padding-top: $header-height;
 }
 
 .main__section {

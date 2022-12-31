@@ -3,6 +3,9 @@ header {
     justify-content: space-around;
     height: $header-height;
     background: $primary-bkg;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
     .logo img {
         max-height: $header-height;
     }
